@@ -1,20 +1,18 @@
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import createSagaMiddleware from "redux-saga";
-import sagas from "./sagas";
-import weatherReducer from "./reducers/Weather";
+import saga from './sagas';
+import { reducers } from './reducers';
 
 export default () => {
-  const rootReducer = combineReducers({
-    weather: weatherReducer
-  });
+	const rootReducer = combineReducers( reducers );
+	const composeEnhancers = composeWithDevTools({});
+	const sagaMiddleware = createSagaMiddleware();
+	const store = createStore(
+		rootReducer,
+		composeEnhancers( applyMiddleware ( sagaMiddleware ) )
+	);
 
-  const composeEnhancers = composeWithDevTools({});
-  const sagaMiddleware = createSagaMiddleware();
-  const middlewares = applyMiddleware(sagaMiddleware);
-  const store = createStore(rootReducer, composeEnhancers(middlewares));
-
-  sagas.forEach(sagaMiddleware.run);
-
-  return store;
+	sagaMiddleware.run( saga );
+	return store;
 };

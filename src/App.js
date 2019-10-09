@@ -66,7 +66,7 @@ const App = props => (
       <ApolloProvider client={client}>
         <Wrapper>
           <Header />
-          <NowWhat />
+          {/* <NowWhat /> */}
           <ToastContainer />
         </Wrapper>
       </ApolloProvider>

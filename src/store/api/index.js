@@ -1,1 +1,5 @@
-export default {};
+import * as apimetrics from './metrics';
+
+export {
+	apimetrics
+};
