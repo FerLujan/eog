@@ -17,7 +17,9 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
-import NowWhat from "./components/NowWhat";
+import ChartContainer from './components/ChartContainer';
+// import NowWhat from "./components/NowWhat";
+
 // import { OperationData } from "@apollo/react-hooks/lib/data/OperationData";
 
 //Apollo links conf

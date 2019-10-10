@@ -11,20 +11,18 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Input from '@material-ui/core/Input'
 import Checkbox from '@material-ui/core/Checkbox'
 import ListItemText from '@material-ui/core/ListItemText';
-import FormHelperText from '@material-ui/core/FormHelperText';
+// import FormHelperText from '@material-ui/core/FormHelperText';
 
 import { selectors } from "../store/reducers";
 import { metrics as metricsActions } from '../store/actions/index';
 
 const useStyles = makeStyles( theme =>({
-
 		formControl: {
 			margin: theme.spacing(1),
 			padding: theme.spacing(1),
 			minWidth: 120,
 			backgroundColor: '#f9f9f9',
 			borderRadius: '5px'
-
 		}
     })
 );
