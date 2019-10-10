@@ -7,7 +7,6 @@ const { setData, updateData } = actions;
 export const reducer = handleActions(
 	{
 		[ setData ]: ( state, { payload } ) => {
-			// payload is the data retrieved for the selected metric(s)
 			const { length } = payload;
 
 			if ( !length ) {
@@ -28,11 +27,11 @@ export const reducer = handleActions(
 		},
 		[ updateData ]: ( state, { payload } ) => {
 			const { metric } = payload;
-
-			// validate that the metric is still there
+			//metric not ok
 			if ( !state[ metric ] ) {
 				return { ...state };
 			}
+			//metric is ok
 			return {
 				...state,
 				[ metric ]: [ ...state[ metric ], payload ]

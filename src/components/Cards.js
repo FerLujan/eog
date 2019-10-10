@@ -6,15 +6,19 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles( theme => ( {
 	root: {
-		display: 'flex'
+		display: 'flex',
+		flexGrow: '1',
 	},
 	paper: {
 		boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
 		transition: '0.3s',
 		textAlign: 'center',
 		width: '100%',
-		margin: '0 5px',
+		margin: '2px 5px',
 		padding: '0 5px'
+	},
+	metricText:{
+		textDecoration: 'underline'
 	}
 } ) );
 
@@ -45,7 +49,7 @@ export default function Cards () {
 						className={ classes.paper }
 					>
 						<div>
-							<h4>{ metricText }</h4>
+							<h4 className={classes.metricText}><b>{ metricText }</b></h4>
 							<p>{ metric.value }</p>
 						</div>
 					</Paper>

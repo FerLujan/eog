@@ -1,4 +1,5 @@
 const urlGraphQL = 'https://react.eogresources.com/graphql';
+//Query 
 const graphQLRequestBody = {
 	method: 'POST',
 	headers: {

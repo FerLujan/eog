@@ -18,7 +18,7 @@ subscription {
 	}
 }`;
 
-export default function MetricsSubscription () {
+export default function SubscriptionWS () {
 	const data = useSelector( selectors.charts.getChartsData );
 	const dispatch = useDispatch();
 	const {

@@ -18,9 +18,9 @@ import { metrics as metricsActions } from '../store/actions/index';
 
 const useStyles = makeStyles( theme =>({
 		formControl: {
-			margin: theme.spacing(1),
+			margin: theme.spacing(1.5),
 			padding: theme.spacing(1),
-			minWidth: 120,
+			minWidth: 150,
 			backgroundColor: '#f9f9f9',
 			borderRadius: '5px'
 		}

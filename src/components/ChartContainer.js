@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Metrics from './Metrics';
 import Cards from './Cards';
 import Charts from './Charts';
-import MetricsSubscription from './MetricsSubscriptions';
+import SuscriptionWS from './SubscriptionsWS';
 
 const useStyles = makeStyles( theme => ( {
 	root: {
@@ -11,7 +11,7 @@ const useStyles = makeStyles( theme => ( {
 	},
 	cont:{
 		backgrounColor: "#f9f9f9",
-		width: '20%',
+		width: '30%',
 		height: '100%'
 	},
 
@@ -23,7 +23,7 @@ export default function Content () {
 		<Fragment>
 			<div className={classes.root}>
 				<Metrics/>
-				<MetricsSubscription />
+				<SuscriptionWS />
 				<Cards />
 			</div>
 			<Charts />

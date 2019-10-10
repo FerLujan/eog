@@ -10,8 +10,7 @@ import { selectors } from '../store/reducers';
 
 const useStyles = makeStyles( {
 	card: {
-		marginTop: 15,
-		margin: '15px auto 10px',
+		margin: '5em auto',
 		width: '90%'
 	}
 } );
