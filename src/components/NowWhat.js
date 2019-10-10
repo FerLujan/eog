@@ -7,6 +7,8 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { makeStyles } from "@material-ui/core/styles";
+
+//Components
 import Avatar from "./Avatar";
 
 const useStyles = makeStyles({

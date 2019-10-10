@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+//Components
 import Metrics from './Metrics';
 import Cards from './Cards';
 import Charts from './Charts';
@@ -20,13 +21,13 @@ const useStyles = makeStyles( theme => ( {
 export default function Content () {
 	const classes = useStyles();
 	return (
-		<Fragment>
+		<div>
 			<div className={classes.root}>
 				<Metrics/>
 				<SuscriptionWS />
 				<Cards />
 			</div>
 			<Charts />
-		</Fragment>
+		</div>
 	);
 }

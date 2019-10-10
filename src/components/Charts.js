@@ -1,11 +1,13 @@
 import React from "react";
 import { useSelector } from 'react-redux';
+import Highcharts from 'highcharts';
 
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { makeStyles } from "@material-ui/core/styles";
 import HighchartsReact from 'highcharts-react-official';
-import Highcharts from 'highcharts';
+
+//redux
 import { selectors } from '../store/reducers';
 
 const useStyles = makeStyles( {

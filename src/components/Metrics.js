@@ -13,6 +13,7 @@ import Checkbox from '@material-ui/core/Checkbox'
 import ListItemText from '@material-ui/core/ListItemText';
 // import FormHelperText from '@material-ui/core/FormHelperText';
 
+//Redux
 import { selectors } from "../store/reducers";
 import { metrics as metricsActions } from '../store/actions/index';
 

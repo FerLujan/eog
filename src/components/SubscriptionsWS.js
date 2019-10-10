@@ -2,12 +2,23 @@ import { useEffect } from 'react'
 import { gql } from 'apollo-boost';
 import { useSubscription } from '@apollo/react-hooks';
 import { useDispatch, useSelector } from 'react-redux';
+
+//Redux
 import { selectors } from '../store/reducers';
 import {
 	metrics as metricActions,
 	charts as chartsActions
 } from '../store/actions/index';
 
+//react apollo hooqs
+// const COMMENTS_SUBSCRIPTION = gql`
+//   subscription onCommentAdded($repoFullName: String!) {
+//     commentAdded(repoFullName: $repoFullName) {
+//       id
+//       content
+//     }
+//   }
+// `;
 const NEW_MEASUREMENT_SUBSCRIPTION = gql`
 subscription {
 	newMeasurement {
@@ -18,7 +29,7 @@ subscription {
 	}
 }`;
 
-export default function SubscriptionWS () {
+export default function SubscriptionWS (){
 	const data = useSelector( selectors.charts.getChartsData );
 	const dispatch = useDispatch();
 	const {
@@ -28,25 +39,25 @@ export default function SubscriptionWS () {
 
 	useEffect(
 		() => {
-			return function () {
-				if ( !newMeasurement ) {
+			return function (){
+				if( !newMeasurement ){
 					return;
 				}
 
 				const metrics = Object.keys( data );
 
-				if (
+				if(
 					metrics.length &&
 					metrics.includes( newMeasurement.metric )
-				) {
-					dispatch( chartsActions.updateData( newMeasurement ) );
+				){
+					dispatch( chartsActions.updateData( newMeasurement ));
 				}
 			}
 		}
 	);
 
-	if ( !loading ) {
-		dispatch( metricActions.newMetrics( newMeasurement ) );
+	if( !loading ){
+		dispatch( metricActions.newMetrics( newMeasurement ));
 	}
 	return '';
 }
