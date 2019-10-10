@@ -10,7 +10,9 @@ const useStyles = makeStyles( theme => ( {
 	},
 	paper: {
 		textAlign: 'center',
-		width: '20%'
+		width: '100%',
+		margin: '0 5px',
+		padding: '0 5px'
 	}
 } ) );
 

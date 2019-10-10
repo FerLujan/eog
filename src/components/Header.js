@@ -3,9 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles } from "@material-ui/core/styles";
-import Weather from "./Weather";
-
-import Metrics from './Metrics';
+// import Weather from "./Weather";
 
 const useStyles = makeStyles({
   grow: {
@@ -24,7 +22,6 @@ export default () => {
           {name} EOG React Visualization Assessment
         </Typography>
         {/* <Weather /> */}
-        <Metrics/>
       </Toolbar>
     </AppBar>
   );
