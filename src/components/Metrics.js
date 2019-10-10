@@ -61,7 +61,6 @@ const Metrics = () => {
 	useEffect(
 		() => {
 			if ( error ) {
-				// dispatch({ type: actions.API_ERROR, error: error.message });
 				return;
 			} else if ( !data ) {
 				return;
@@ -96,7 +95,7 @@ const Metrics = () => {
 						key={ idx }
 						value={ val }
 					>
-						<Checkbox checked={ selectedMetrics.indexOf( val ) > -1 } />
+						<Checkbox checked={ selectedMetrics.indexOf( val ) > -1 } color="primary" />
 						<ListItemText primary={ val } />
 					</MenuItem>
 				) ) }

@@ -16,11 +16,14 @@ const useStyles = makeStyles( {
 	}
 } );
 const chartOptions = {
+	chart:{
+		type: 'spline'
+	},
 	credits: {
 		enabled: false
 	},
 	title: {
-		text: ''
+		text: 'EOG Metrics'
 	},
 	xAxis: {
 		type: 'datetime',

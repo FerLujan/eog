@@ -9,6 +9,8 @@ const useStyles = makeStyles( theme => ( {
 		display: 'flex'
 	},
 	paper: {
+		boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+		transition: '0.3s',
 		textAlign: 'center',
 		width: '100%',
 		margin: '0 5px',
@@ -36,14 +38,15 @@ export default function Cards () {
 				if ( metric === undefined ) {
 					return '';
 				}
+				const metricText = metric.metric.replace(/([A-Z])/g, ' $1').replace(/^./, (str)=> str.toUpperCase());
 				return (
 					<Paper
 						key={ idx }
 						className={ classes.paper }
 					>
 						<div>
-							<h3>{ metric.metric }</h3>
-							<h3>{ metric.value }</h3>
+							<h4>{ metricText }</h4>
+							<p>{ metric.value }</p>
 						</div>
 					</Paper>
 				);

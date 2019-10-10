@@ -20,9 +20,7 @@ import Wrapper from "./components/Wrapper";
 import ChartContainer from './components/ChartContainer';
 // import NowWhat from "./components/NowWhat";
 
-// import { OperationData } from "@apollo/react-hooks/lib/data/OperationData";
-
-//Apollo links conf
+//Apollo conf
 const httpLink = new HttpLink({
   uri: 'https://react.eogresources.com/graphql'
 });
@@ -50,14 +48,11 @@ const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: "#FF5A5F"
-    },
-    secondary: {
-      main: "#484848"
-    },
-    background: {
-      main: "#767676"
-    }
+			main: '#1976d2'
+		},
+		background: {
+			main: "rgb(226,231,238)"
+		}
   }
 });
 
